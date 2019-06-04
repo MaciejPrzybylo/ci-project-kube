@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: group-service
+  labels:
+    app: group-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: group-service
+  template:
+    metadata:
+      labels:
+        app: group-service
+    spec:
+      containters:
+      - image: docker.io/maciejprzybylo95/group-service
+        ports:
+        - containerPort: 3000
