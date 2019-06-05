@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: authentication-service
+  name: dashboard-client
 spec:
   selector:
-    app: authentication-service
+    app: dashboard-client
   ports:
   - protocol: TCP
-    port: 3000
-    targetPort: 3000
+    port: 8080
+    targetPort: 8080
   type: ClusterIP

@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: dashboard-client
@@ -14,7 +14,8 @@ spec:
       labels:
         app: dashboard-client
     spec:
-      containters:
+      containers:
       - image: docker.io/maciejprzybylo95/dashboard-client
+        name: dashboard-client
         ports:
-        - containerPort: 3000
+        - containerPort: 8080

@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mongo-service
@@ -14,7 +14,8 @@ spec:
       labels:
         app: mongo-service
     spec:
-      containters:
+      containers:
       - image: docker.io/maciejprzybylo95/mongo-service
+        name: mongo-service
         ports:
         - containerPort: 3000
