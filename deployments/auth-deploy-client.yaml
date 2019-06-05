@@ -1,20 +1,21 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: authentification-client
+  name: authentication-client
   labels:
-    app: authentification-client
+    app: authentication-client
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: authentification-client
+      app: authentication-client
   template:
     metadata:
       labels:
-        app: authentification-client
+        app: authentication-client
     spec:
-      containters:
-      - image: docker.io/maciejprzybylo95/authentification-client
+      containers:
+      - image: docker.io/maciejprzybylo95/authentication-client
+        name: authentication-client
         ports:
-        - containerPort: 3000
+        - containerPort: 8080

@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: email-service
@@ -14,8 +14,9 @@ spec:
       labels:
         app: email-service
     spec:
-      containters:
+      containers:
       - image: docker.io/maciejprzybylo95/email-service
+        name: email-service
         ports:
         - containerPort: 3000
         env:

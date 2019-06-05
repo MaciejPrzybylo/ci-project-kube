@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: aes-encyption-service
+  name: aes-encryption-service
 spec:
   selector:
-    app: aes-encyption-service
+    app: aes-encryption-service
   ports:
   - protocol: TCP
     port: 3000
